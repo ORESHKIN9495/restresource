@@ -12,6 +12,7 @@ import TheHeader from './components/TheHeader.vue'
 :root {
   --c-theme: #393b44;
   --c-v1: #fff;
+  --c-background: linear-gradient(180deg, #f1f1f1 0%, rgba(255, 255, 255, 0) 44.27%);
 
   --scheme-gap: 20px;
 
@@ -31,7 +32,7 @@ import TheHeader from './components/TheHeader.vue'
 }
 
 body {
-  background-color: var(--c-v1);
+  background-color: var(--c-background);
   font: 300 var(--size-s) / 1.62 var(--scheme-font);
 }
 
@@ -43,5 +44,10 @@ svg {
   display: block;
   height: 100%;
   width: 100%;
+}
+
+input {
+  border: none;
+  outline: none;
 }
 </style>

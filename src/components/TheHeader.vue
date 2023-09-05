@@ -1,4 +1,5 @@
 <script setup>
+import TheHeaderBottom from '../components/TheHeaderBottom.vue'
 import TheLogo from '../components/TheLogo.vue'
 </script>
 
@@ -51,19 +52,19 @@ import TheLogo from '../components/TheLogo.vue'
     <svg>
       <use xlink:href="../assets/images/sprite.svg#menu" />
     </svg>
+
+    <TheHeaderBottom></TheHeaderBottom>
   </header>
 </template>
 
 <style lang="scss" scoped>
 header {
-  align-items: center;
-  box-shadow: var(--scheme-shadow);
   display: grid;
   grid-template: 46px / 216px auto;
-  gap: 20px;
+  gap: calc(var(--scheme-gap) * 2);
   padding: var(--scheme-gap);
 
-  nav {
+  nav:not(:last-child) {
     margin: 0 0 0 auto;
 
     ul {

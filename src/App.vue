@@ -16,9 +16,7 @@ import TheHeader from './components/TheHeader.vue'
 
   --scheme-gap: 20px;
 
-  --size-l: 45px;
-  --size-m: 30px;
-  --size-s: 15px;
+  --size-text: 15px;
 
   --scheme-font: system-ui, sans-serif;
 
@@ -33,7 +31,20 @@ import TheHeader from './components/TheHeader.vue'
 
 body {
   background-color: var(--c-background);
-  font: 300 var(--size-s) / 1.62 var(--scheme-font);
+
+  font: 300 var(--size-text) / 1.62 var(--scheme-font);
+}
+
+h1 {
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+h2 {
+  font-size: clamp(18px, 4vw, 24px);
+}
+
+h3 {
+  font-size: clamp(16px, 4vw, 20px);
 }
 
 ul {

@@ -23,11 +23,7 @@ const array = ref([
         {{ item.content }}
       </p>
 
-      <RouterLink
-        :to="{
-          name: 'home'
-        }"
-      >
+      <a>
         Новости недели
 
         <i>
@@ -35,10 +31,10 @@ const array = ref([
             <use xlink:href="@/assets/images/sprite.svg#arrow" />
           </svg>
         </i>
-      </RouterLink>
+      </a>
     </article>
 
-    <video autoplay loop :src="item.video" :poster="item.picture[0]" />
+    <video autoplay loop :src="item.video" :poster="item.picture[1]" />
   </section>
 </template>
 
@@ -65,6 +61,7 @@ section {
 
     a {
       color: #fff;
+      cursor: pointer;
       display: block;
       max-width: 200px;
       margin: auto 0 0;

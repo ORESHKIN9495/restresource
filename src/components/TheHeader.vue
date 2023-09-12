@@ -30,13 +30,11 @@ import TheLogo from '@/components/TheLogo.vue'
 header {
   background-color: #ffff;
   display: grid;
-  grid-template: auto / repeat(2, 1fr);
-  gap: calc(var(--scheme-gap) * 2);
+  grid-template: 50px 50px / repeat(2, 1fr);
   padding: var(--scheme-gap);
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
   z-index: 99;
 
   svg {
@@ -50,6 +48,8 @@ header {
 
 @media only screen and (max-width: 920px) {
   header {
+    grid-template: 50px / repeat(2, 1fr);
+
     nav {
       display: none;
     }

@@ -79,10 +79,8 @@ section {
     a {
       color: #fff;
       cursor: pointer;
-      display: block;
       max-width: 200px;
       margin: auto 0 0;
-      text-decoration: none;
 
       i {
         background-color: #ffffff40;
@@ -92,7 +90,6 @@ section {
 
         svg {
           height: 10px;
-          margin: auto;
         }
       }
     }

@@ -50,15 +50,15 @@ nav {
       cursor: pointer;
 
       &:first-of-type {
-        border-color: var(--c-theme);
+        border-color: var(--color-theme);
         border-style: solid;
         border-width: 1px;
         padding: 10px var(--scheme-gap);
         transition: 0.1s ease;
 
         &:hover {
-          background-color: var(--c-theme);
-          color: var(--c-v1);
+          background-color: var(--color-theme);
+          color: var(--color-v1);
         }
       }
     }

@@ -42,8 +42,13 @@ watchEffect(() => {
         Новости недели
 
         <i>
-          <svg>
-            <use xlink:href="@/assets/images/sprite.svg#arrow" />
+          <svg xmlns="http://www.w3.org/2000/svg" id="arrow" fill="none" viewBox="0 0 14 8">
+            <path
+              fill="var(--color-theme)"
+              fill-rule="evenodd"
+              d="M.646.646a.5.5 0 0 1 .708 0L7 6.293 12.646.646a.501.501 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708Z"
+              clip-rule="evenodd"
+            />
           </svg>
         </i>
       </a>
@@ -61,7 +66,7 @@ section {
   margin: 140px auto 0;
 
   article {
-    color: #fff;
+    color: var(--color-v1);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -77,7 +82,7 @@ section {
     }
 
     a {
-      color: #fff;
+      color: var(--color-v1);
       cursor: pointer;
       max-width: 200px;
       margin: auto 0 0;

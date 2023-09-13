@@ -13,13 +13,16 @@ import TheLogo from '@/components/TheLogo.vue'
       custom
       v-slot="{ navigate }"
     >
-      <TheLogo v-on:click="navigate"></TheLogo>
+      <TheLogo v-on:click="navigate" :color="false"></TheLogo>
     </RouterLink>
 
     <TheHeaderTop></TheHeaderTop>
 
-    <svg>
-      <use xlink:href="../assets/images/sprite.svg#menu" />
+    <svg xmlns="http://www.w3.org/2000/svg" id="menu" fill="none" viewBox="0 0 42 29">
+      <path
+        fill="var(--color-theme)"
+        d="M0 0h42v4.143H0V0ZM0 12.429h42v4.142H0V12.43ZM0 24.857h42V29H0v-4.143Z"
+      />
     </svg>
 
     <TheHeaderBottom></TheHeaderBottom>
@@ -28,7 +31,7 @@ import TheLogo from '@/components/TheLogo.vue'
 
 <style lang="scss" scoped>
 header {
-  background-color: #ffff;
+  background-color: var(--color-v1);
   display: grid;
   grid-template: 50px 50px / repeat(2, 1fr);
   padding: var(--scheme-gap);

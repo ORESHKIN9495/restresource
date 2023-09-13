@@ -1,4 +1,5 @@
 <script setup>
+import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
 </script>
 
@@ -6,13 +7,15 @@ import TheHeader from './components/TheHeader.vue'
   <TheHeader></TheHeader>
 
   <RouterView />
+
+  <TheFooter></TheFooter>
 </template>
 
 <style lang="scss">
 :root {
-  --c-theme: #393b44;
-  --c-v1: #fff;
-  --c-background: linear-gradient(180deg, #f1f1f1 0%, rgba(255, 255, 255, 0) 44.27%);
+  --color-theme: #393b44;
+  --color-v1: #fff;
+  --color-background: linear-gradient(180deg, #f1f1f1 0%, rgba(255, 255, 255, 0) 44.27%);
 
   --scheme-gap: 20px;
 
@@ -30,7 +33,7 @@ import TheHeader from './components/TheHeader.vue'
 }
 
 body {
-  background-color: var(--c-background);
+  background-color: var(--color-background);
 
   font: 300 var(--size-text) / 1.62 var(--scheme-font);
 }

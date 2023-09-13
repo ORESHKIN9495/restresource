@@ -13,7 +13,7 @@ import heroComponent from '../component/hero/heroComponent.vue'
 <style scoped lang="scss">
 main {
   section {
-    height: 3000px;
+    height: 1000px;
   }
 }
 </style>

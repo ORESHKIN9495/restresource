@@ -4,22 +4,23 @@ import { useCardStore } from '../../stores/card/card'
 const store = useCardStore()
 
 defineProps({
+  cards: {},
   small: Boolean
 })
 </script>
 
 <template>
-  <article v-for="card in store.array" :key="card.id">
+  <article>
     <picture>
-      <source type="image/webp" :srcset="card.picture[1]" />
-      <img :src="card.picture[0]" loading="lazy" />
+      <source type="image/webp" :srcset="cards.picture[1]" />
+      <img :src="cards.picture[0]" loading="lazy" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="14"
         fill="none"
         viewBox="0 0 16 14"
-        v-on:click="store.getCardId(card.id)"
+        v-on:click="store.getCardId(cards.id)"
       >
         <path
           fill="#fff"
@@ -35,7 +36,7 @@ defineProps({
       custom
       v-slot="{ navigate }"
     >
-      <h3 v-on:click="navigate">{{ card.title }}</h3>
+      <h3 v-on:click="navigate">{{ cards.title }}</h3>
     </RouterLink>
 
     <RouterLink
@@ -45,11 +46,11 @@ defineProps({
       custom
       v-slot="{ navigate }"
     >
-      <p v-on:click="navigate">{{ card.collection }}</p>
+      <p v-on:click="navigate">{{ cards.collection }}</p>
     </RouterLink>
 
     <p v-if="!small">
-      {{ card.description }}
+      {{ cards.description }}
     </p>
   </article>
 </template>

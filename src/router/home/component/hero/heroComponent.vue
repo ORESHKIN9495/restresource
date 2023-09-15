@@ -72,6 +72,7 @@ section {
     height: 100%;
     margin: auto;
     max-width: 1200px;
+    padding: 0 var(--scheme-gap);
 
     h1 {
       margin: auto 0 0;

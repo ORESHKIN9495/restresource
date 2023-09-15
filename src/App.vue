@@ -14,7 +14,9 @@ import TheHeader from './components/TheHeader.vue'
 <style lang="scss">
 :root {
   --color-theme: #393b44;
+
   --color-v1: #fff;
+
   --color-background: linear-gradient(180deg, #f1f1f1 0%, rgba(255, 255, 255, 0) 44.27%);
 
   --scheme-gap: 20px;
@@ -35,6 +37,8 @@ import TheHeader from './components/TheHeader.vue'
 body {
   background-color: var(--color-background);
 
+  color: var(--color-theme);
+
   font: 300 var(--size-text) / 1.62 var(--scheme-font);
 }
 
@@ -50,18 +54,28 @@ h3 {
   font-size: clamp(16px, 4vw, 20px);
 }
 
-ul {
-  list-style: none;
+input {
+  border: none;
+  outline: none;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+picture {
+  display: block;
 }
 
 svg {
+  cursor: pointer;
   display: block;
   height: 100%;
   width: 100%;
 }
 
-input {
-  border: none;
-  outline: none;
+ul {
+  list-style: none;
 }
 </style>

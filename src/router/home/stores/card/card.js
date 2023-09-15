@@ -1,33 +1,33 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
-
-export const useCardArray = defineStore('cardArray', () => {
-  const array = ref([
-    {
-      id: 1,
-      title: 'Venetian',
-      collection: 'Recipe collection',
-      picture: [
-        'https://placehold.co/2048x1080/393B44/FFF.jpg',
-        'https://placehold.co/2048x1080/393B44/FFF.webp'
-      ],
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem laborum minima
-            incidunt nostrum. Totam nobis et ipsum eaque quasi illo amet tempora cupiditate omnis
-            perspiciatis provident veritatis nisi deleniti magnam, eveniet facere tenetur commodi
-            expedita. Neque aliquid ab aliquam incidunt nesciunt facilis modi veritatis facere quam,
-            laudantium sit quos quidem, accusantium rem a velit soluta cupiditate, dolores aut eum.
-            Repudiandae molestiae quae, vitae voluptatem aliquam consectetur corporis a! Sapiente esse,
-            saepe fuga a molestiae, dolore facilis culpa voluptatum nobis asperiores explicabo, aliquam ad
-            eius omnis rerum eaque? Laboriosam impedit omnis optio ipsum autem, quaerat animi odit et
-            fugiat nihil.`
-    }
-  ])
-
-  return { array }
-})
 
 export const useCardStore = defineStore('carrdStore', {
-  state: () => ({ id: 0 })
-})
+  state: () => ({
+    array: [
+      {
+        id: 1,
+        title: 'Venetian',
+        collection: 'Recipe collection',
+        picture: [
+          'https://placehold.co/2048x1080/393B44/FFF.jpg',
+          'https://placehold.co/2048x1080/393B44/FFF.webp'
+        ],
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem laborum minima
+              incidunt nostrum. Totam nobis et ipsum eaque quasi illo amet tempora cupiditate omnis
+              perspiciatis provident veritatis nisi deleniti magnam, eveniet facere tenetur commodi
+              expedita. Neque aliquid ab aliquam incidunt nesciunt facilis modi veritatis facere quam,
+              laudantium sit quos quidem, accusantium rem a velit soluta cupiditate, dolores aut eum.
+              Repudiandae molestiae quae, vitae voluptatem aliquam consectetur corporis a! Sapiente esse,
+              saepe fuga a molestiae, dolore facilis culpa voluptatum nobis asperiores explicabo, aliquam ad
+              eius omnis rerum eaque? Laboriosam impedit omnis optio ipsum autem, quaerat animi odit et
+              fugiat nihil.`
+      }
+    ],
 
-console.log(useCardStore.id)
+    id: null
+  }),
+  actions: {
+    getCardId(id) {
+      this.id = id
+    }
+  }
+})

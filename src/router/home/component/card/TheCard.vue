@@ -1,7 +1,5 @@
 <script setup>
-import { useCardArray, useCardStore } from '../../stores/card/card'
-
-const cards = useCardArray()
+import { useCardStore } from '../../stores/card/card'
 
 const store = useCardStore()
 
@@ -11,18 +9,17 @@ defineProps({
 </script>
 
 <template>
-  <article v-for="card in cards.array" :key="card.id">
+  <article v-for="card in store.array" :key="card.id">
     <picture>
       <source type="image/webp" :srcset="card.picture[1]" />
       <img :src="card.picture[0]" loading="lazy" />
-
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="14"
         fill="none"
         viewBox="0 0 16 14"
-        v-on:click="store.id = card.id"
+        v-on:click="store.getCardId(card.id)"
       >
         <path
           fill="#fff"

@@ -113,11 +113,13 @@ export const useCardStore = defineStore('carrdStore', {
       }
     ],
 
-    id: null
+    id: []
   }),
   actions: {
     getCardId(id) {
-      this.id = id
+      this.id.push(id)
+
+      console.log(this.id)
     }
   }
 })

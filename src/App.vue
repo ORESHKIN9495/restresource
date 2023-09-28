@@ -41,14 +41,17 @@ body {
 }
 
 h1 {
+  font: inherit;
   font-size: clamp(24px, 4vw, 36px);
 }
 
 h2 {
+  font: inherit;
   font-size: clamp(18px, 4vw, 24px);
 }
 
 h3 {
+  font: inherit;
   font-size: clamp(16px, 4vw, 20px);
 }
 
@@ -80,7 +83,7 @@ button {
   border: none;
   color: inherit;
   outline: none;
-  padding: 10px 40px;
+  padding: 20px 40px;
 }
 
 .column {

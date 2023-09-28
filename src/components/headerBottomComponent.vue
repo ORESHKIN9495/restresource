@@ -99,7 +99,7 @@ nav {
       width: 12px;
 
       &.active {
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
       }
     }
   }

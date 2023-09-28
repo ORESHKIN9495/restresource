@@ -25,7 +25,7 @@
 
       <RouterLink
         :to="{
-          name: 'home'
+          name: 'plan'
         }"
         custom
         v-slot="{ navigate }"

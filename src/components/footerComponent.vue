@@ -1,6 +1,6 @@
 <script setup>
-import TheLogo from '../components/TheLogo.vue'
-import TheSocialNetvork from '../components/TheSocialNetwork.vue'
+import logotypeComponent from './logotypeComponent.vue'
+import socialNetworkComponent from './socialNetworkComponent.vue'
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import TheSocialNetvork from '../components/TheSocialNetwork.vue'
           custom
           v-slot="{ navigate }"
         >
-          <TheLogo v-on:click="navigate" :color="true"></TheLogo>
+          <logotypeComponent v-on:click="navigate" :color="true"></logotypeComponent>
         </RouterLink>
 
         <ul>
@@ -62,7 +62,7 @@ import TheSocialNetvork from '../components/TheSocialNetwork.vue'
         <p>© ООО «Ресторанный ресурс»</p>
       </nav>
 
-      <TheSocialNetvork></TheSocialNetvork>
+      <socialNetworkComponent></socialNetworkComponent>
     </section>
   </footer>
 </template>

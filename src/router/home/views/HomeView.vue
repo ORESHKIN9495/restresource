@@ -1,8 +1,8 @@
 <script setup>
-import bannerComponent from '../components/bannerComponent.vue'
-import cardComponent from '../components/cardComponent.vue'
 import heroComponent from '../components/heroComponent.vue'
-import { useCardStore } from '../store/card'
+import bannerComponent from '/src/components/bannerComponent.vue'
+import cardComponent from '/src/components/cardComponent.vue'
+import { useCardStore } from '/src/stores/card'
 
 const store = useCardStore()
 </script>
@@ -65,62 +65,6 @@ main {
     margin: auto;
     max-width: 1200px;
     padding: var(--scheme-gap);
-  }
-}
-
-.column {
-  display: grid;
-  grid-template: auto / repeat(3, 1fr);
-  gap: var(--scheme-gap);
-
-  h2 {
-    grid-column: 1 / 4;
-  }
-
-  article {
-    &:first-of-type {
-      grid-area: 2 / 1 / 4 / 3;
-    }
-  }
-
-  @media only screen and (max-width: 920px) {
-    grid-template: auto / repeat(2, 1fr);
-
-    h2 {
-      grid-column: 1 / 3;
-    }
-  }
-
-  @media only screen and (max-width: 720px) {
-    grid-template: auto / 1fr;
-
-    h2 {
-      grid-column: unset;
-    }
-
-    article {
-      &:first-of-type {
-        grid-area: unset;
-      }
-    }
-  }
-}
-
-.row {
-  display: grid;
-  grid-template: auto / repeat(5, 1fr);
-  gap: var(--scheme-gap);
-
-  h2 {
-    grid-column: 1 / 6;
-  }
-
-  @media only screen and (max-width: 720px) {
-    grid-template: auto / 1fr;
-
-    h2 {
-      grid-column: unset;
-    }
   }
 }
 </style>

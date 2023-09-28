@@ -42,13 +42,8 @@ watchEffect(() => {
         Новости недели
 
         <i>
-          <svg xmlns="http://www.w3.org/2000/svg" id="arrow" fill="none" viewBox="0 0 14 8">
-            <path
-              fill="var(--color-theme)"
-              fill-rule="evenodd"
-              d="M.646.646a.5.5 0 0 1 .708 0L7 6.293 12.646.646a.501.501 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708Z"
-              clip-rule="evenodd"
-            />
+          <svg>
+            <use xlink:href="/src/assets/images/sprites.svg#chevron"></use>
           </svg>
         </i>
       </a>
@@ -95,7 +90,9 @@ section {
         padding: var(--scheme-gap) calc(var(--scheme-gap) * 2);
 
         svg {
-          height: 10px;
+          height: 24px;
+          margin: auto;
+          width: 24px;
         }
       }
     }

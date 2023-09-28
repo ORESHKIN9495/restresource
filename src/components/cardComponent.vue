@@ -1,5 +1,5 @@
 <script setup>
-import { useCardStore } from '../store/card'
+import { useCardStore } from '../stores/card'
 
 const store = useCardStore()
 
@@ -29,19 +29,11 @@ const props = defineProps({
       </svg>
     </picture>
 
-    <RouterLink
-      :to="{
-        name: 'home'
-      }"
-      custom
-      v-slot="{ navigate }"
-    >
-      <h3 v-on:click="navigate">{{ cards.title }}</h3>
-    </RouterLink>
+    <h3 v-on:click="navigate">{{ cards.title }}</h3>
 
     <RouterLink
       :to="{
-        name: 'home'
+        name: 'recipe'
       }"
       custom
       v-slot="{ navigate }"

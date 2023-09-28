@@ -1,7 +1,7 @@
 <script setup>
-import TheHeaderBottom from '@/components/TheHeaderBottom.vue'
-import TheHeaderTop from '@/components/TheHeaderTop.vue'
-import TheLogo from '@/components/TheLogo.vue'
+import headerBottomComponent from './headerBottomComponent.vue'
+import headerTopComponent from './headerTopComponent.vue'
+import logotypeComponent from './logotypeComponent.vue'
 </script>
 
 <template>
@@ -13,19 +13,16 @@ import TheLogo from '@/components/TheLogo.vue'
       custom
       v-slot="{ navigate }"
     >
-      <TheLogo v-on:click="navigate" :color="false"></TheLogo>
+      <logotypeComponent v-on:click="navigate" :color="false"></logotypeComponent>
     </RouterLink>
 
-    <TheHeaderTop></TheHeaderTop>
+    <headerTopComponent></headerTopComponent>
 
-    <svg xmlns="http://www.w3.org/2000/svg" id="menu" fill="none" viewBox="0 0 42 29">
-      <path
-        fill="var(--color-theme)"
-        d="M0 0h42v4.143H0V0ZM0 12.429h42v4.142H0V12.43ZM0 24.857h42V29H0v-4.143Z"
-      />
+    <svg>
+      <use xlink:href="/src/assets/images/sprites.svg#menu"></use>
     </svg>
 
-    <TheHeaderBottom></TheHeaderBottom>
+    <headerBottomComponent></headerBottomComponent>
   </header>
 </template>
 

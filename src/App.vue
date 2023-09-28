@@ -1,14 +1,14 @@
 <script setup>
-import TheFooter from './components/TheFooter.vue'
-import TheHeader from './components/TheHeader.vue'
+import footerComponent from './components/footerComponent.vue'
+import headerComponent from './components/headerComponent.vue'
 </script>
 
 <template>
-  <TheHeader></TheHeader>
+  <headerComponent></headerComponent>
 
   <RouterView />
 
-  <TheFooter></TheFooter>
+  <footerComponent></footerComponent>
 </template>
 
 <style lang="scss">
@@ -69,8 +69,6 @@ picture {
 svg {
   cursor: pointer;
   display: block;
-  height: 100%;
-  width: 100%;
 }
 
 ul {
@@ -83,5 +81,61 @@ button {
   color: inherit;
   outline: none;
   padding: 10px 40px;
+}
+
+.column {
+  display: grid;
+  grid-template: auto / repeat(3, 1fr);
+  gap: var(--scheme-gap);
+
+  h2 {
+    grid-column: 1 / 4;
+  }
+
+  article {
+    &:first-of-type {
+      grid-area: 2 / 1 / 4 / 3;
+    }
+  }
+
+  @media only screen and (max-width: 920px) {
+    grid-template: auto / repeat(2, 1fr);
+
+    h2 {
+      grid-column: 1 / 3;
+    }
+  }
+
+  @media only screen and (max-width: 720px) {
+    grid-template: auto / 1fr;
+
+    h2 {
+      grid-column: unset;
+    }
+
+    article {
+      &:first-of-type {
+        grid-area: unset;
+      }
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template: auto / repeat(5, 1fr);
+  gap: var(--scheme-gap);
+
+  h2 {
+    grid-column: 1 / 6;
+  }
+
+  @media only screen and (max-width: 720px) {
+    grid-template: auto / 1fr;
+
+    h2 {
+      grid-column: unset;
+    }
+  }
 }
 </style>

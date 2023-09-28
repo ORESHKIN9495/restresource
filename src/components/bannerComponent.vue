@@ -24,7 +24,7 @@ section {
     display: grid;
     gap: calc(var(--scheme-gap) * 2);
     color: var(--color-v1);
-    padding: 100px;
+    padding: clamp(20px, 4vw, 100px);
     place-items: center;
 
     p {

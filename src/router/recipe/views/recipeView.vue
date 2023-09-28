@@ -144,12 +144,20 @@ main {
           }
         }
       }
+
+      @media only screen and (max-width: 920px) {
+        grid-template: auto / 1fr;
+      }
     }
 
     &:nth-child(4) {
       display: grid;
       grid-template: auto / auto 1fr;
       gap: var(--scheme-gap);
+
+      @media only screen and (max-width: 920px) {
+        grid-template: auto / 1fr;
+      }
     }
   }
 }

@@ -76,7 +76,7 @@ export const useCardStore = defineStore('carrdStore', {
               fugiat nihil.`
       },
       {
-        id: 6,
+        id: 5,
         title: 'Venetian',
         collection: 'Recipe collection',
         picture: [

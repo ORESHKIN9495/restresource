@@ -1,9 +1,9 @@
 <script setup>
-import { useCardStore } from '../../stores/card/card'
+import { useCardStore } from '../store/card'
 
 const store = useCardStore()
 
-defineProps({
+const props = defineProps({
   cards: {},
   small: Boolean
 })
@@ -12,15 +12,15 @@ defineProps({
 <template>
   <article>
     <picture>
-      <source type="image/webp" :srcset="cards.picture[1]" />
-      <img :src="cards.picture[0]" loading="lazy" />
+      <source type="image/webp" :srcset="props.cards.picture[1]" />
+      <img :src="props.cards.picture[0]" loading="lazy" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="14"
         fill="none"
         viewBox="0 0 16 14"
-        v-on:click="store.getCardId(cards.id)"
+        v-on:click="store.getCardId(props.cards.id)"
       >
         <path
           fill="#fff"

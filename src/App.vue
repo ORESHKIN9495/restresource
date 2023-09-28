@@ -78,4 +78,12 @@ svg {
 ul {
   list-style: none;
 }
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  padding: 10px 40px;
+}
 </style>

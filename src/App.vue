@@ -36,9 +36,7 @@ import TheHeader from './components/TheHeader.vue'
 
 body {
   background-color: var(--color-background);
-
   color: var(--color-theme);
-
   font: 300 var(--size-text) / 1.62 var(--scheme-font);
 }
 
@@ -81,8 +79,8 @@ ul {
 
 button {
   background: none;
-  color: inherit;
   border: none;
+  color: inherit;
   outline: none;
   padding: 10px 40px;
 }

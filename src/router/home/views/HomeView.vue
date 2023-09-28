@@ -116,11 +116,11 @@ main {
   }
 
   @media only screen and (max-width: 720px) {
+    grid-template: auto / 1fr;
+
     h2 {
       grid-column: unset;
     }
-
-    grid-template: auto / 1fr;
   }
 }
 </style>

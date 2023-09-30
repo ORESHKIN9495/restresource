@@ -9,7 +9,7 @@ import {
   validateFirstName,
   validateLastName,
   validatePassword
-} from '@/composables/validate'
+} from '@/composables/validateSignup'
 
 import { ref } from 'vue'
 // import { useSignin } from '../store/useSignin'

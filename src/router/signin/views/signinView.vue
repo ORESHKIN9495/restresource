@@ -1,5 +1,5 @@
 <script lang="js" setup>
-import { errors, validateEmail, validatePassword } from '@/composables/validate'
+import { errors, validateEmail, validatePassword } from '@/composables/validateSignin'
 import { ref } from 'vue'
 // import { useSignin } from '../store/useSignin'
 

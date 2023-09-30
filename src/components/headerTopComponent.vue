@@ -5,7 +5,7 @@
     <ul>
       <RouterLink
         :to="{
-          name: 'home'
+          name: 'plan'
         }"
         custom
         v-slot="{ navigate }"
@@ -15,7 +15,7 @@
 
       <RouterLink
         :to="{
-          name: 'home'
+          name: 'sign-in'
         }"
         custom
         v-slot="{ navigate }"
@@ -25,7 +25,7 @@
 
       <RouterLink
         :to="{
-          name: 'plan'
+          name: 'sign-up'
         }"
         custom
         v-slot="{ navigate }"

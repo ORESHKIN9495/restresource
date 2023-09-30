@@ -14,6 +14,7 @@ import headerComponent from './components/headerComponent.vue'
 <style lang="scss">
 :root {
   --color-theme: #393b44;
+  --color-theme-alpha: 57, 59, 68;
 
   --color-v1: #fff;
 

@@ -9,7 +9,7 @@ import {
   validateFirstName,
   validateLastName,
   validatePassword
-} from '@/composables/validateSignup'
+} from '@/composables/validate'
 
 import { ref } from 'vue'
 // import { useSignin } from '../store/useSignin'
@@ -44,9 +44,11 @@ const prepare = () => {
     errors.value.date === null &&
     errors.value.checked === null
   ) {
-    // store.update(form.value)
+    if (form.value.password === form.value.confirmed) {
+      console.log('Погнали')
 
-    console.log('Погнали')
+      // store.update(form.value)
+    }
   }
 }
 
@@ -130,7 +132,7 @@ for (let i = 1; i < 32; i++) {
 
           <input type="password" v-model.trim="form.confirmed" />
 
-          <small>{{ errors.password }}</small>
+          <small v-if="form.confirmed !== form.password">Пароли не совпадают</small>
         </label>
 
         <label>
@@ -205,7 +207,7 @@ main {
       label {
         input {
           border: 1px solid #eee;
-          font-size: 18px;
+          font: inherit;
           margin: 10px 0;
           padding: 10px;
           width: 100%;

@@ -51,15 +51,9 @@ const validateChecked = (checked) => {
   }
 }
 
-const validatePassword = (password, confirmed) => {
+const validatePassword = (password) => {
   if (password.length >= 6) {
     errors.value.password = null
-
-    if (confirmed === password) {
-      errors.value.password = null
-    } else {
-      errors.value.password = 'Пароли не совпадают'
-    }
   } else {
     errors.value.password = 'Введите корректный пароль'
   }

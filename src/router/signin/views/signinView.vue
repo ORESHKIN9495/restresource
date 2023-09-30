@@ -1,5 +1,5 @@
 <script lang="js" setup>
-import { errors, validateEmail, validatePassword } from '@/composables/validateSignin'
+import { errors, validateEmail, validatePassword } from '@/composables/validate'
 import { ref } from 'vue'
 // import { useSignin } from '../store/useSignin'
 
@@ -74,7 +74,7 @@ main {
       label {
         input {
           border: 1px solid #eee;
-          font-size: 18px;
+          font: inherit;
           margin: 10px 0;
           padding: 10px;
           width: 100%;

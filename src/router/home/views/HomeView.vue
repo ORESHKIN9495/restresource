@@ -11,7 +11,7 @@ const store = useCardStore()
   <main>
     <heroComponent></heroComponent>
 
-    <section class="column">
+    <section id="section_a" class="column">
       <h2>The bright shades of winter</h2>
 
       <cardComponent

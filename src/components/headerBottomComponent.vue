@@ -78,7 +78,7 @@ nav {
   display: grid;
   grid-template: auto / auto 1fr;
   grid-column: 1 / 3;
-  gap: 20px;
+  gap: var(--scheme-gap);
 
   ul {
     display: grid;

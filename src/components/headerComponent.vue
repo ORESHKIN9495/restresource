@@ -6,15 +6,7 @@ import logotypeComponent from './logotypeComponent.vue'
 
 <template>
   <header>
-    <RouterLink
-      :to="{
-        name: 'home'
-      }"
-      custom
-      v-slot="{ navigate }"
-    >
-      <logotypeComponent v-on:click="navigate" :color="false"></logotypeComponent>
-    </RouterLink>
+    <logotypeComponent :color="false"></logotypeComponent>
 
     <headerTopComponent></headerTopComponent>
 
@@ -30,25 +22,24 @@ import logotypeComponent from './logotypeComponent.vue'
 header {
   background-color: var(--color-v1);
   display: grid;
-  grid-template: 50px 50px / repeat(2, 1fr);
+  grid-template: 50px 50px / 1fr auto;
   padding: var(--scheme-gap);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 9;
 
   svg {
     cursor: pointer;
     display: none;
-    height: 40px;
-    margin: 0 0 0 auto;
-    width: 40px;
+    height: 100%;
+    width: 50px;
   }
 }
 
 @media only screen and (max-width: 920px) {
   header {
-    grid-template: 50px / repeat(2, 1fr);
+    grid-template: 50px / 1fr auto;
 
     nav {
       display: none;

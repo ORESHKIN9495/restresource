@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watchEffect } from 'vue'
+import { ref } from 'vue'
 
 const array = ref([
   {
@@ -13,21 +13,6 @@ const array = ref([
     video: 'https://placehold.co/2048x1080/393B44/FFF.mp4'
   }
 ])
-
-const move = ref(false)
-
-watchEffect(() => {
-  if (move.value == true) {
-    window.scrollBy({
-      top: 1190,
-      behavior: 'smooth'
-    })
-
-    setTimeout(() => {
-      move.value = false
-    }, 0)
-  }
-})
 </script>
 
 <template>
@@ -38,7 +23,7 @@ watchEffect(() => {
         {{ item.content }}
       </p>
 
-      <a v-on:click="move = true">
+      <a v-scroll-to="{ el: '#section_a', offset: -140 }">
         Новости недели
 
         <i>
@@ -61,7 +46,7 @@ section {
   margin: 140px auto 0;
 
   article {
-    color: var(--color-v1);
+    color: var(--color-theme);
     display: flex;
     flex-direction: column;
     height: 100%;

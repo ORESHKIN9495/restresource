@@ -38,8 +38,6 @@
 
 <style lang="scss" scoped>
 nav {
-  margin: 0 0 0 auto;
-
   ul {
     align-items: center;
     display: grid;
@@ -50,9 +48,7 @@ nav {
       cursor: pointer;
 
       &:first-of-type {
-        border-color: var(--color-theme);
-        border-style: solid;
-        border-width: 1px;
+        border: 1px solid var(--color-theme);
         padding: 10px var(--scheme-gap);
         transition: 0.1s ease;
 

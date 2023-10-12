@@ -7,15 +7,7 @@ import socialNetworkComponent from './socialNetworkComponent.vue'
   <footer>
     <section>
       <nav>
-        <RouterLink
-          :to="{
-            name: 'home'
-          }"
-          custom
-          v-slot="{ navigate }"
-        >
-          <logotypeComponent v-on:click="navigate" :color="true"></logotypeComponent>
-        </RouterLink>
+        <logotypeComponent :color="true"></logotypeComponent>
 
         <ul>
           <RouterLink

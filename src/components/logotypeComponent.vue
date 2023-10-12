@@ -5,7 +5,11 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <RouterLink
+    :to="{
+      name: 'home'
+    }"
+  >
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 45">
       <path
         :class="{ color: color }"
@@ -31,15 +35,15 @@ defineProps({
         clip-rule="evenodd"
       />
     </svg>
-  </div>
+  </RouterLink>
 </template>
 
 <style lang="scss" scoped>
-div {
-  cursor: pointer;
+a {
   display: grid;
-  grid-template: auto / 50px 150px;
-  gap: 20px;
+  grid-template: auto / 50px 180px;
+  gap: var(--scheme-gap);
+  width: fit-content;
 
   svg {
     &:first-child {

@@ -134,11 +134,40 @@ button {
     grid-column: 1 / 6;
   }
 
+  &_flex {
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+
+      article {
+        flex: 0 0 33.333%;
+        padding: 20px 10px 0;
+
+        &:nth-last-child(-n + 2) {
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+
   @media only screen and (max-width: 720px) {
     grid-template: auto / 1fr;
 
     h2 {
       grid-column: unset;
+    }
+
+    &_flex {
+      div {
+        article {
+          flex: 0 0 50%;
+
+          &:last-child {
+            flex: 0 0 100%;
+          }
+        }
+      }
     }
   }
 }

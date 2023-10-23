@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import searchBarComponent from './searchBarComponent.vue'
 
+import recipeNavigation from './recipeNavigation.vue'
+
 const active = ref(false)
 </script>
 
@@ -71,6 +73,8 @@ const active = ref(false)
 
     <searchBarComponent></searchBarComponent>
   </nav>
+
+  <recipeNavigation v-if="active"></recipeNavigation>
 </template>
 
 <style lang="scss" scoped>
@@ -102,6 +106,12 @@ nav {
         transform: rotate(90deg);
       }
     }
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  nav {
+    display: none;
   }
 }
 </style>

@@ -35,18 +35,14 @@ header {
   svg {
     cursor: pointer;
     display: none;
-    height: 100%;
-    width: 50px;
+    height: 40px;
+    width: 40px;
   }
 }
 
 @media only screen and (max-width: 920px) {
   header {
     grid-template: 50px / 1fr auto;
-
-    nav {
-      display: none;
-    }
 
     svg {
       display: block;

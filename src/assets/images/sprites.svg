@@ -36,8 +36,11 @@
     <symbol id="knife" fill="none" width="148" height="16" viewBox="0 0 148 16">
         <g clip-path="url(#a)"><path fill="currentColor" d="M91.133.49a.648.648 0 0 0-.879-.44l-9.238 3.958-8.134 3.517c-5.496 2.199-11.649 5.277-11.649 5.277a13.444 13.444 0 0 0-4.4 2.858c2.418.44 8.794-1.319 8.794-1.319 3.518-1.1 15.83-5.716 15.83-5.716a.3.3 0 0 0 0-.44 2.126 2.126 0 0 1 .22-2.858 5.256 5.256 0 0 1 1.978-.22s3.3-.22 5.056-1.979c0 0 .66-.66 1.1-.66a.473.473 0 0 1 .44.44s0 .22.22 0 .66-.44.88-.879A1.388 1.388 0 0 0 91.132.49Z"/><mask id="b" fill="#fff"><path d="M.833 9.571h50-50Z"/></mask><path fill="currentColor" d="M.833 10.071h50v-1h-50v1Z" mask="url(#b)"/><mask id="c" fill="#fff"><path d="M97.833 9.571h50-50Z"/></mask><path fill="currentColor" d="M97.833 10.071h50v-1h-50v1Z" mask="url(#c)"/></g><defs><clipPath id="a"><path fill="#fff" d="M.833 0h147v15.731h-147z"/></clipPath></defs>
     </symbol>
-</svg>
 
+    <symbol id="line" >
+        <path fill="#393B44" d="M.5 1.533h50v-1H.5v1Z" />
+    </symbol>
+</svg>
 
 
 

@@ -1,5 +1,5 @@
 <script setup>
-import { useCardStore } from '../stores/card'
+import { useCardStore } from '../stores/useCards'
 
 const store = useCardStore()
 
@@ -20,7 +20,7 @@ const props = defineProps({
         height="14"
         fill="none"
         viewBox="0 0 16 14"
-        v-on:click="store.getCardId(props.cards.id)"
+        v-on:click="store.favorites.push(props.cards.id)"
       >
         <path
           fill="#fff"

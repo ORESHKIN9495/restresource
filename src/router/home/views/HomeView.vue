@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import heroComponent from '../components/heroComponent.vue'
 import bannerComponent from '/src/components/bannerComponent.vue'
 import cardComponent from '/src/components/cardComponent.vue'
-import { useCardStore } from '/src/stores/card'
+import { useCardStore } from '/src/stores/useCards'
 
 const store = useCardStore()
 

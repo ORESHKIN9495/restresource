@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import searchBarComponent from './searchBarComponent.vue'
 
-import recipeNavigation from './recipeNavigation.vue'
+import recipeNavigationComponent from './recipeNavigationComponent.vue'
 
 const active = ref(false)
 </script>
@@ -74,7 +74,7 @@ const active = ref(false)
     <searchBarComponent></searchBarComponent>
   </nav>
 
-  <recipeNavigation v-if="active"></recipeNavigation>
+  <recipeNavigationComponent v-on:close="active = false" v-if="active"></recipeNavigationComponent>
 </template>
 
 <style lang="scss" scoped>

@@ -4,7 +4,7 @@ import ingredientsComponent from '../components/ingredientsComponent.vue'
 import methodComponent from '../components/methodComponent.vue'
 import bannerComponent from '/src/components/bannerComponent.vue'
 import cardComponent from '/src/components/cardComponent.vue'
-import { useCardStore } from '/src/stores/card'
+import { useCardStore } from '/src/stores/useCards'
 
 const store = useCardStore()
 

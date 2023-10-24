@@ -41,7 +41,7 @@ defineProps({
 <style lang="scss" scoped>
 a {
   display: grid;
-  grid-template: auto / 50px 180px;
+  grid-template: auto / 40px 160px;
   gap: var(--scheme-gap);
   width: fit-content;
 

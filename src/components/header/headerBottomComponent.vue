@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import searchBarComponent from './searchBarComponent.vue'
-
+import searchBarComponent from '../searchBarComponent.vue'
 import recipeNavigationComponent from './recipeNavigationComponent.vue'
 
 const active = ref(false)
@@ -86,15 +85,15 @@ nav {
 
   ul {
     display: grid;
-    grid-auto-flow: column;
+    grid-template: auto / repeat(4, auto);
     gap: var(--scheme-gap);
 
     li {
+      align-items: center;
       cursor: pointer;
-      display: grid;
-      grid-auto-flow: column;
+      display: flex;
       gap: 10px;
-      place-items: center;
+      white-space: nowrap;
     }
 
     svg {

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 
 const array = ref([
   {
@@ -13,6 +13,18 @@ const array = ref([
     video: 'https://placehold.co/2048x1080/393B44/FFF.mp4'
   }
 ])
+
+const offset = ref(-140)
+
+watchEffect(() => {
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 920) {
+      offset.value = -90
+    } else {
+      offset.value = -140
+    }
+  })
+})
 </script>
 
 <template>
@@ -23,7 +35,7 @@ const array = ref([
         {{ item.content }}
       </p>
 
-      <a v-scroll-to="{ el: '#section_a', offset: -140 }">
+      <a v-scroll-to="{ el: '#section_a', offset: offset }">
         Новости недели
 
         <i>

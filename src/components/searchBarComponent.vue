@@ -5,15 +5,10 @@ const active = ref(false)
 </script>
 
 <template>
-  <form>
-    <input
-      type="text"
-      :class="{ active: active }"
-      placeholder="Найти"
-      v-on:focusout="active = !active"
-    />
+  <form v-outside="() => (active = false)">
+    <input type="text" :class="{ active: active }" placeholder="Найти" />
 
-    <svg v-on:click="active = !active">
+    <svg v-on:click="active = !active" width="20" height="20">
       <use xlink:href="/src/assets/images/sprites.svg#search"></use>
     </svg>
   </form>
@@ -21,29 +16,22 @@ const active = ref(false)
 
 <style lang="scss" scoped>
 form {
-  align-items: center;
   display: grid;
-  grid-template: auto / 1fr 30px;
-  gap: var(--scheme-gap);
+  grid-template: auto / 1fr 20px;
+  margin: 0 0 0 auto;
+  max-width: 300px;
+  place-items: center flex-end;
+  width: 100%;
 
   input {
-    color: var(--color-theme);
-    margin: 0 0 0 auto;
-    max-width: 0;
     opacity: 0;
     transition: 0.5s ease;
-    width: 100%;
+    width: 0;
 
     &.active {
-      max-width: 300px;
       opacity: 1;
+      width: 100%;
     }
-  }
-
-  svg {
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
   }
 }
 </style>

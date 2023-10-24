@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-
-import { useRecipeStore } from '../stores/useRecipe'
+import { useRecipeStore } from '/src/stores/useRecipe'
 
 const store = useRecipeStore()
 </script>
@@ -12,11 +11,11 @@ const store = useRecipeStore()
       <li>{{ item.title }}</li>
 
       <RouterLink
+        v-for="el of item.link"
+        :key="el"
         :to="{ name: el.path }"
         custom
         v-slot="navigate"
-        v-for="el of item.link"
-        :key="el"
       >
         <li v-on:click="navigate" v-outside="() => $emit('close')">
           <svg width="15" height="2">
@@ -32,18 +31,10 @@ const store = useRecipeStore()
 
 <style lang="scss" scoped>
 nav {
-  background-color: #fff;
-  display: grid;
   grid-template: auto / repeat(5, 1fr) !important;
-  gap: 20px;
-  inset: 140px 0 auto;
-  justify-items: center;
-  position: fixed;
   padding: 20px clamp(20px, 8vw, 160px);
 
   ul {
-    width: 100%;
-
     &:nth-child(-n + 5) {
       border-bottom: 1px solid rgba(rgb(57, 59, 68), 0.2);
       padding: 0 0 20px;
@@ -52,12 +43,8 @@ nav {
     li {
       &:first-child {
         font-weight: 400;
+        font-size: 16px;
         margin: 0 0 10px;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
       }
 
       &:not(:first-child) {
